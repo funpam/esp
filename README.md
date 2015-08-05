@@ -9,7 +9,7 @@ Moduły ESP2866 to układy które komunikują się ze światem zewnętrznym za p
 
 ##Jak rozpocząć przygodę z płytkami funpam i modułami ESP2866
 ### Masz jak na razie tylko dobre chęci
-* Zaopatrz się w moduł ESP2866-12 i płytkę startową funpam. Sprawdź ofertę sklepu (www.pamjgora.pl)(http://www.pamjgora.pl/sklep/index.php/produkt/plytka-startowa-do-modulu-esp8266-012).
+* Zaopatrz się w moduł ESP2866-12 i płytkę startową funpam. Sprawdź ofertę sklepu [www.pamjgora.pl](http://www.pamjgora.pl/sklep/index.php/produkt/plytka-startowa-do-modulu-esp8266-012).
 * [Zacznij tworzyć!]()
 
 ###Masz już moduły ESP2866-12, potrzebujesz tylko płytki startowej.
