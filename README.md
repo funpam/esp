@@ -1,5 +1,5 @@
 #Płytka startowa funpam pod ESP2866-12
-[](https://cloud.githubusercontent.com/assets/13647476/9096517/de5f1716-3bbd-11e5-8946-27052cb7e4be.jpg)
+![zesp1_350x274](https://cloud.githubusercontent.com/assets/13647476/9096517/de5f1716-3bbd-11e5-8946-27052cb7e4be.jpg)
 ##Wprowadzenie
 Płytka startowa funpam ESP2866 jest przeznaczona dla osób, które chcą szybko i niewielkim kosztem rozpocząć pracę z popularnymi modułami WIFI ESP2866-12.
 Zamiast tracić czas i nerwy, budując układ "na pająka" z byle jakim zasilaniem, uruchom swój układ w 5 minut i poczuj czystą przyjemność tworzenia.
@@ -24,6 +24,6 @@ Moduły ESP2866 to układy które komunikują się ze światem zewnętrznym za p
   
 
 
-![zesp1_350x274](https://cloud.githubusercontent.com/assets/13647476/9096517/de5f1716-3bbd-11e5-8946-27052cb7e4be.jpg)
+
 
 https://cloud.githubusercontent.com/assets/13647476/9096517/de5f1716-3bbd-11e5-8946-27052cb7e4be.jpg
