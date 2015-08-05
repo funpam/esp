@@ -17,13 +17,3 @@ Moduły ESP2866 to układy które komunikują się ze światem zewnętrznym za p
 * [Wgraj firmware]()
 * [Zacznij tworzyć!]()
 
-
-
-
-
-  
-
-
-
-
-https://cloud.githubusercontent.com/assets/13647476/9096517/de5f1716-3bbd-11e5-8946-27052cb7e4be.jpg
