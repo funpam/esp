@@ -24,4 +24,4 @@ local _led2Port=5; --5 means GPIO14
 gpio.mode(_led2Port,gpio.OUTPUT) --set GPIO14 as output
 
 -- use timer0 to periodically call function 
-tmr.alarm(0, 60000, 1, function() blinkLed(_led2Port) end )
+tmr.alarm(0, 1000, 1, function() blinkLed(_led2Port) end )
