@@ -3,6 +3,20 @@
 -- Copyright [2015] [werar@go2.pl https://github.com/werar]
 -- Licensed under the Apache License, Version 2.0 (the "License")  http://www.apache.org/licenses/LICENSE-2.0
 
+
+
+function writeConf(params)
+  file.open("conf.txt","w")
+  file.writeline(params.sid)
+  file.writeline(params.password)
+--file.writeline(params.thinkSpeakIP)
+--file.writeline(params.thinkSpeakKey)
+  file.close()
+  print("Saved to conf.txt");
+  
+end
+
+
 -- read config parameters from conf.txt file
 function readConf()
     conf={}
@@ -11,10 +25,10 @@ function readConf()
      if(_line~=nil) then conf.sid=string.gsub(_line,"\n","") end
      _line=file.readline()
      if(_line~=nil) then conf.password=string.gsub(_line,"\n","") end
-     _line=file.readline()
-     if(_line~=nil) then conf.thinkIP=string.gsub(_line,"\n","") end
-     _line=file.readline()
-     if(_line~=nil) then conf.thinkSpeakKey=string.gsub(_line,"\n","") end
+     --_line=file.readline()
+     --if(_line~=nil) then conf.thinkSpeakIP=string.gsub(_line,"\n","") end
+     --_line=file.readline()
+     --if(_line~=nil) then conf.thinkSpeakKey=string.gsub(_line,"\n","") end
     file.close()
 	end
     return conf
@@ -38,7 +52,7 @@ cfg.ssid="ESP_"..node.chipid() --SSID
 cfg.pwd="1234567890" --password 
 wifi.ap.config(cfg)
 tmr.delay(1000)
-
+print("test1")
 srv=net.createServer(net.TCP) 
 srv:listen(80,function(conn) 
     conn:on("receive", function(client,request)
@@ -51,46 +65,24 @@ srv:listen(80,function(conn)
         if (vars ~= nil)then 
             for k, v in string.gmatch(vars, "(%w+)=(%w+)&*") do 
                 _GET[k] = v 
-				print("parametry:"..k.." "..v)
+				print("parameters:"..k.." "..v)
             end 
 			
-		if(_GET.sid ~= nil and _GET.password ~= nil and _GET.thinkSpeakKey ~= nil) then
-		  print("Saved to conf.txt");
-		  writeConf(_GET); --TODO: zapisujemy za kazdym razem, nawet jak ktos kliknie ON/OFF?
+		if(_GET.sid ~= nil and _GET.password ~= nil) then
+		  writeConf(_GET);
 		else
-		 -- buf = buf.."<h2>Wypelnij wszystkie pola</h2>"
-		  local tempLED2
-		 if (_GET.LED2~=nil) then 
-		   tempLED2=_GET.LED2
-		 end
+		   buf = buf.."<h2>Wypelnij wszystkie pola</h2>"
 		  _GET=readConf()
-		  _GET.LED2=LED2
-		  print("Test.Zapisuje takze piny".._GET.pin1.._GET.pin2)
 		end	
 		else
 			_GET=readConf()
         end
 		
-        buf = buf.."<h2>Set ports</h2><form src=\"/\">";
-		buf = buf.."LED2: <select name=\"LED2\" onchange=\"form.submit()\">"
-        local _on,_off = "",""
-        if(_GET.LED2 == "ON")then
-              _on = " selected=true";
-              gpio.write(5, gpio.HIGH);
-        elseif(_GET.LED2 == "OFF")then
-              _off = " selected=\"true\"";
-              gpio.write(5, gpio.LOW);
-        end
-		 buf = buf.."<option".._on..">ON</opton><option".._off..">OFF</option></select><BR>";
-		buf = buf.."</form>"
-	
-	    buf = buf.."<h2>Input: "..gpio.read(1).."</h2>";
-	
 	    buf = buf.."<h2>Settings</h2><form src=\"/\">"
 		buf = buf..addHttpInput("sid",_GET.sid,"WIFI SID")
 		buf = buf..addHttpInput("password",_GET.password,"WIFI password")
-		buf = buf..addHttpInput("thinkSpeakIP",_GET.thinkSpeakIP,"thinkSpeak IP")
-		buf = buf..addHttpInput("thinkSpeakKey",_GET.thinkSpeakKey,"thinkSpeak Key")
+		--buf = buf..addHttpInput("thinkSpeakIP",_GET.thinkSpeakIP,"thinkSpeak IP")
+		--buf = buf..addHttpInput("thinkSpeakKey",_GET.thinkSpeakKey,"thinkSpeak Key")
 		buf = buf.."<BR><input type=\"submit\" value=\"Save\">"
 		buf = buf.."</form>";
 	
