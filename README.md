@@ -19,7 +19,7 @@ JP8      | Podłączony do GPIO04. Przeznaczony do podłączenia przycisku, prze
 JP9      | Port analogowo cyfrowy
 
 ###Zasilanie
-Płytkę zasila się przez złącze microUSB (+5V). Wystarczy standardowy zasilacz, można też podłączyć ją bezpośrednio do komputera.
+Płytkę zasila się przez złącze microUSB (+5V). Wystarczy standardowy zasilacz, można też podłączyć ją bezpośrednio do wejścia USB w komputerze.
 
 Więcej szczegółów [tutaj](https://github.com/funpam/esp/wiki).
 
