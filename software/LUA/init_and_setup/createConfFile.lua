@@ -8,8 +8,8 @@ function writeConf(params)
   file.open("conf.txt","w")
   file.writeline("ssidName") -- wifi ssid name
   file.writeline("wifi_password") -- wifi password
-  file.writeline("184.106.153.149") -- thinkspeak ip
-  file.writeline("thinkspeak_token") -- thinkspeak token
+  --file.writeline("184.106.153.149") -- thinkspeak ip
+  --file.writeline("thinkspeak_token") -- thinkspeak token
   file.close()
   print("Config is saved");
 end
