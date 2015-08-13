@@ -8,8 +8,8 @@
 
 gpio.mode(1,gpio.INPUT)  --JP8 is connected to JP8
 if gpio.read(1)==0 then
-  print("Run configuration mode")
-  dofile("setup.lua")
+  print("Run in configuration mode")
+  dofile("setup.lc") --you must compile setup.lua before!
 else
 
 print("Setting up WIFI...")

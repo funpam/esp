@@ -1,4 +1,5 @@
 -- ESP2866 WWW configurator  
+-- compile this file before run
 -- It creates new WIFI with ssid like "ESP_XXXXX" standard password is: "1234567890" (you can change this in the code)
 -- Copyright [2015] [werar@go2.pl https://github.com/werar]
 -- Licensed under the Apache License, Version 2.0 (the "License")  http://www.apache.org/licenses/LICENSE-2.0
@@ -52,7 +53,6 @@ cfg.ssid="ESP_"..node.chipid() --SSID
 cfg.pwd="1234567890" --password 
 wifi.ap.config(cfg)
 tmr.delay(1000)
-print("test1")
 srv=net.createServer(net.TCP) 
 srv:listen(80,function(conn) 
     conn:on("receive", function(client,request)
