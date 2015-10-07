@@ -21,7 +21,7 @@ JP9      | Port analogowo cyfrowy
 ###Zasilanie
 Płytkę zasila się przez złącze microUSB (+5V). Wystarczy standardowy zasilacz, można też podłączyć ją bezpośrednio do wejścia USB w komputerze.
 
-Więcej szczegółów [tutaj](https://github.com/funpam/esp/wiki).
+Więcej szczegółów [tutaj](http://www.pamjgora.pl/wiki/Płytka_FUNPAM).
 
 ##Jak rozpocząć przygodę z płytkami funpam i modułami ESP8266
 ### Masz jak na razie tylko dobre chęci
@@ -31,6 +31,6 @@ Więcej szczegółów [tutaj](https://github.com/funpam/esp/wiki).
 ###Masz już moduły ESP8266-12, potrzebujesz tylko płytki startowej.
 * Poszukaj w naszej ofercie [płytek bez wlutowanego modułu ESP2866](http://www.pamjgora.pl/sklep/index.php/produkt/plytka-startowa-do-modulu-esp8266-012). 
 * Przylutuj swój moduł
-* [Wgraj firmware]()
+* [Wgraj firmware](http://www.pamjgora.pl/wiki/Za%C5%82adowanie_nowego_firmware)
 * [Zacznij tworzyć!](http://www.pamjgora.pl/wiki/FUNPAM)
 
